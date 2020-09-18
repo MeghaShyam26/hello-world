@@ -3,5 +3,6 @@ steps:
   args: ["app", "deploy", "--version=v1"]
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy", 'new/', '--no-promote', "--version=v2"]
-
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ["app", "services", 'set-traffic', '--splits=v2=.5,v1=.5']
 timeout: "1600s"
