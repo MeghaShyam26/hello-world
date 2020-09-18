@@ -2,6 +2,6 @@ steps:
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy", "--version=v1"]
 - name: "gcr.io/cloud-builders/gcloud"
-  args: ["app", "deploy", 'new/', '--no-stop-previous-version', "--version=v2"]
+  args: ["app", "deploy", 'new/', '--no-promote', "--version=v2"]
 
 timeout: "1600s"
